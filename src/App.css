@@ -1,0 +1,94 @@
+:root {
+  background-color: #111111;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  color: white;
+}
+
+* {
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, auto);
+
+  grid-template-areas:
+    "call-stack call-stack web-api web-api"
+    "call-stack call-stack web-api web-api"
+    "event-loop task-queue task-queue task-queue"
+    "event-loop microtask-queue microtask-queue microtask-queue";
+
+  gap: 10px;
+}
+
+.card {
+  padding: 4px;
+  border-radius: 2rem;
+}
+
+.cardContent:hover {
+  background-color: #222222;
+  cursor: pointer;
+  transform: translateY(-1px);
+}
+
+.card:nth-child(1) {
+  grid-area: call-stack;
+  background: linear-gradient(45deg, #db5eff, #f6b62a);
+}
+
+.card:nth-child(2) {
+  grid-area: web-api;
+  background: linear-gradient(45deg, #d32fff, #6e009d);
+}
+
+.card:nth-child(3) {
+  grid-area: event-loop;
+  background: linear-gradient(45deg, #2f2f2f, #606060);
+}
+
+.card:nth-child(4) {
+  grid-area: task-queue;
+  background: linear-gradient(45deg, #ff39de, #c90046);
+}
+
+.card:nth-child(5) {
+  grid-area: microtask-queue;
+  background: linear-gradient(45deg, #a1ff2f, #f8ff2b);
+}
+
+.cardContent {
+  background-color: #1a1a1a;
+  border-radius: 1.8rem;
+  padding: 1.5rem;
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  margin-top: 0;
+}
+
+.subtitle {
+  margin-top: 0;
+}
+
+.cardContent ul  {
+  margin: 0;
+  color: #e0e0e0;
+}
+
+.cardContent ul li {
+  font-size: 14px;
+}
+
+.hint {
+  color: grey;
+  font-size: .75rem;
+}
