@@ -72,7 +72,7 @@
 }
 
 .title {
-  margin-top: 0;
+  margin: 0 0 .5rem;
 }
 
 .subtitle {
@@ -89,6 +89,7 @@
 }
 
 .hint {
+  margin-top: 0;
   color: grey;
   font-size: .75rem;
 }

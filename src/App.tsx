@@ -1,4 +1,5 @@
 import './App.css'
+import {Card} from "./components/Card.tsx";
 
 function App() {
   const cards = {
@@ -60,26 +61,15 @@ function App() {
 
   return (
     <>
-      <h1>Training Modal Windows</h1>
+      <h3>Training Modal Windows</h3>
+      <h1>Event Loop</h1>
 
       <div className="cardsGrid">
 
-        {Object.values(cards.byId).map((el) => {
-          return <div className="card">
-            <div className="cardContent">
-              <h2 className="title">{el.title}</h2>
-              <p className="subtitle">{el.subtitle}</p>
+        {Object.values(cards.byId).map((el) =>
+          (<Card title={el.title}/>))
 
-              {el.mainFeatures.map((el) => {
-                return <ul>
-                  <li>{ el}</li>
-                </ul>
-              })}
-              <p className="hint">Click on card to open</p>
-
-            </div>
-          </div>
-        })}
+        }
 
       </div>
     </>
