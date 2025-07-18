@@ -58,7 +58,6 @@ function App() {
     allId: ['1', '2', '3', '4', '5']
   };
 
-
   return (
     <>
       <h3>Training Modal Windows</h3>
